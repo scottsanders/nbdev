@@ -124,11 +124,11 @@ class NBDev {
 		if(!isset($this->event)) return $this->error[] = "No event selected";
 		
 		//Check for required fields
-		if(empty(trim($_POST['name']))) $this->error['name'] = "Event Name is required";
-		if(empty(trim($_POST['intro']))) $this->error['intro'] = "Event Details are required";
-		if(empty(trim($_POST['status']))) $this->error['status'] = "Status is required";
-		if(empty(trim($_POST['start_time']))) $this->error['start_time'] = "Start time is required";
-		if(empty(trim($_POST['end_time']))) $this->error['end_time'] = "End time is required";
+		if(empty($_POST['name'])) $this->error['name'] = "Event Name is required";
+		if(empty($_POST['intro'])) $this->error['intro'] = "Event Details are required";
+		if(empty($_POST['status'])) $this->error['status'] = "Status is required";
+		if(empty($_POST['start_time'])) $this->error['start_time'] = "Start time is required";
+		if(empty($_POST['end_time'])) $this->error['end_time'] = "End time is required";
 
 		if(!$this->error){
 
