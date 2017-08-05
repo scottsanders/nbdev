@@ -1,8 +1,6 @@
 <?php
 
 require('nation.class.php');
-require('oa.class.php');
-require('email.class.php');
 
 class NBDev {
 
