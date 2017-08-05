@@ -1,0 +1,29 @@
+//
+// Global Settigns
+// --------------------------------------------------
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	@include container()
+}
+
+.error {
+	background-color: #fdccc4;
+    border: 1px solid #e7bfb8;
+    color: #333;
+    padding: 1em;
+    border-radius: .2em;
+    margin-top: 1em;
+}
+
+.success { 
+    background-color: #eafddb;
+    border: 1px solid #d4e8c4;
+    color: #333;
+    padding: 1em;
+    border-radius: .2em;
+    margin-top: 1em;
+}

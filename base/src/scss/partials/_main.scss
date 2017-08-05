@@ -1,0 +1,13 @@
+//
+// Header
+// --------------------------------------------------
+
+section.main {
+	background-color: lighten($baseColor,14%);
+	& > .container {
+		background-color: white;
+		border-left: 1px solid lighten($baseColor,5%);
+		border-right: 1px solid lighten($baseColor,5%);
+		min-height: 100vh;
+	}
+}

@@ -1,0 +1,20 @@
+# Ignore MacOS files
+._*
+.DS_Store
+
+# Ignore grunt
+node_modules
+
+# Custom
+*.sql
+*.sublime-project
+*.sublime-workspace
+*.log
+*.tar
+*.idea*
+*.idea
+.idea
+../.idea/
+.editorconfig
+
+actions/*

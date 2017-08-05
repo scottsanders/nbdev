@@ -1,0 +1,187 @@
+//
+// Typography
+// --------------------------------------------------
+@mixin heading-font {
+	font-family: $headingFont;
+}
+
+@mixin paragraph-font {
+	font-family: $paragraphFont;
+}
+
+@mixin h1 {
+	@include heading-font();
+	@include font-size(28);
+	margin: 1em 0 .5em;
+}
+
+@mixin h2 {
+	@include heading-font();
+	@include font-size(32);
+}
+
+@mixin h3 {
+	@include heading-font();
+	@include font-size(26);
+}
+
+@mixin h4 {
+	@include heading-font();
+	@include font-size(22);
+}
+
+@mixin h5 {
+	@include heading-font();
+	@include font-size(20);
+}
+
+@mixin h6 {
+	@include heading-font();
+	@include font-size(16);
+}
+
+@mixin p {
+	@include paragraph-font();
+}
+
+body {
+	color: $textColor;
+	font-family: $paragraphFont;
+	-webkit-font-smoothing: antialiased;
+
+	@include font-size(14);
+}
+
+// Headings
+// -------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+
+h1 {
+	@include h1();
+}
+
+h2 {
+	@include h2();
+}
+
+h3 {
+	@include h3();
+}
+
+h4 {
+	@include h4();
+}
+
+h5 {
+	@include h5();
+}
+
+h6 {
+	@include h6();
+}
+
+// Paragraph
+// -------------------
+
+p {
+	@include p();
+	margin: 1em 0;
+}
+
+a {
+	color: $primaryColor;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// Basic Elements
+// -------------------
+
+abbr,
+acronym {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+address {
+	font-size: 1rem;
+	font-style: italic;
+}
+
+blockquote {
+	margin: 1em 0;
+	padding: 0 0 0 2em;
+}
+
+cite {
+	font-style: italic;
+}
+
+code {
+	font-family: monospace;
+	background: $baseColor;
+	border: 1px solid darken($baseColor, 5%);
+	padding: 0.125em 0.25em;
+	line-height: 150%;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+strong,
+b {
+	font-weight: bold;
+}
+
+hr {
+	outline: none;
+	border: none;
+	margin: 1em 0;
+	padding: 0;
+	border-top: 1px solid $baseColor;
+}
+
+ol,
+ul {
+	margin: 1em 0;
+	padding: 0 0 0 2em;
+	li {
+		list-style-position: outside;
+	}
+}
+ul li { list-style: disc; }
+ol li { list-style: decimal; }
+
+// Form
+// -------------------
+
+form {
+	margin: 1em 0;
+}
+
+// Descriptions
+// -------------------
+
+dl {
+	margin: 1em 0;
+
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		margin: 0 0 0.5em;
+	}
+}

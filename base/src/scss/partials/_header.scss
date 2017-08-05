@@ -1,0 +1,13 @@
+//
+// Header
+// --------------------------------------------------
+
+header.primary {
+	background-color: $fadedBlue;
+	border-bottom: 1px solid darken($fadedBlue, 15%);
+	font-weight: 600;
+	@include font-size(14);
+	a {
+		color: white;
+	}
+}

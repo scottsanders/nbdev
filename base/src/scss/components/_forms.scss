@@ -1,0 +1,151 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Basic Styles
+// -------------------
+
+form {
+	display: block;
+}
+
+fieldset {
+	display: block;
+	margin: 1.25em 0;
+	padding: 0;
+}
+
+legend {
+	display: block;
+	width: 100%;
+	margin: 0 0 1em 0;
+	font-weight: bold;
+	border-bottom: 1px solid $baseColor;
+}
+
+label {
+	display: block;
+	margin: 1.5em 0 .5em;
+	& + .field-description {
+		margin-bottom: .5em;
+	}
+}
+
+// Form Elements
+// -------------------
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="image"],
+input[type="color"],
+.prefix,
+.suffix {
+	display: inline-block;
+	padding: 0.5em;
+	margin: 0 0 0.625em;
+	vertical-align: middle;
+	border: 1px solid $baseColor;
+	background-color: lighten($baseColor,17%);
+	box-shadow: inset 0 1px 1px lighten($baseColor,5%);
+	outline: none;
+	font-family: inherit;
+	@include font-size(13);
+	border-radius: .2em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	@include respond-to('mobile') {
+		width: 100%;
+		display: block;
+	}
+	&:hover {
+		
+	}
+	&:focus {
+		background-color: white;
+	}
+	&.field-error {
+		border: 2px solid $errorColor;
+	}
+}
+
+// Form Buttons
+input[type="file"] {
+	padding: 0.125em;
+	margin: 0 0 0.625em;
+	font-family: inherit;
+	font-size: 1rem;
+	-webkit-appearance: none;
+	border-radius: 0;
+	line-height: 100%;
+}
+
+select {
+	display: inline-block;
+	padding: 0.5em 2.5em .5em .5em;
+	margin: 0 0 0.625em;
+	vertical-align: middle;
+	border: 1px solid $baseColor;
+	background-color: lighten($baseColor,17%);
+	box-shadow: 0 1px 1px lighten($baseColor,5%);
+	outline: none;
+	font-family: inherit;
+	@include font-size(13);
+	border-radius: .2em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url('../img/select-arrow.png');
+	background-size: 7.5px 4px;
+	background-repeat: no-repeat;
+	background-position: 95%;
+	&:hover,
+	&:focus {
+		background-color: white;
+	}
+	&.field-error {
+		border: 2px solid $errorColor;
+	}
+}
+
+// Misc Additions
+
+textarea {
+	padding: 0.5em;
+}
+
+// Bonus HTML5 Elements
+
+progress,
+meter {
+	padding: 0.125em;
+	margin: 0 0 0.625em;
+	font-family: inherit;
+}
+
+
+.suffix {
+	line-height: 1.4;
+	border-radius: 0 .2em .2em 0;
+	box-shadow: none;
+	margin-left: -1px;
+	background-color: lighten($baseColor,15%);
+}
+.field {
+	margin-bottom: 1em;
+}
+.field-description {
+	color: lighten($textColor,55%);
+	@include font-size(12);
+}
