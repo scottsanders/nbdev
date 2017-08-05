@@ -9,8 +9,6 @@ $endpoints = explode("/", $_GET['endpoint']);
 if(empty($_GET['endpoint'])){
 	setcookie("NBDevSlug");
 	setcookie("NBDevAccessToken");
-	setcookie("NBDevSlugscottsanders");
-	setcookie("NBDevSlugcommongrace");
 }
 
 $app = new NBDev();
